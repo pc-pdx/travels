@@ -8,20 +8,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "travels.vanderwolf.us", "ht
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_64821"
-		Debug.AspNetCompiler.PhysicalPath = "P:\vanderwolf.us\travels.vanderwolf.us\"
+		Debug.AspNetCompiler.PhysicalPath = "..\travels.vanderwolf.us\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64821\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_64821"
-		Release.AspNetCompiler.PhysicalPath = "P:\vanderwolf.us\travels.vanderwolf.us\"
+		Release.AspNetCompiler.PhysicalPath = "..\travels.vanderwolf.us\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64821\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "P:\vanderwolf.us\travels.vanderwolf.us\"
+		SlnRelativePath = "..\travels.vanderwolf.us\"
 	EndProjectSection
 EndProject
 Global
