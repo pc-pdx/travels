@@ -21,29 +21,31 @@
 
 		function drawRegionsMap() {
 			var data = google.visualization.arrayToDataTable([
-				['Country'],
-				['United States'],
-				['Canada'],
-				['Mexico'],
-				['Denmark'],
-				['Netherlands'],
-				['Italy'],
-				['Iceland'],
-				['Spain'],
-				['Sweden'],
-				['Norway'],
-				['Morrocco'],
-				['France'],
-				['Finland'],
-				['Estonia']
+				['Country', 'number'],
+				['United States', 1],
+				['Canada', 1],
+				['Mexico', 1],
+				['Denmark', 1],
+				['Netherlands', 1],
+				['Italy', 1],
+				['Iceland', 1],
+				['Spain', 1],
+				['Sweden', 1],
+				['Norway', 1],
+				['Morrocco', 1],
+				['France', 1],
+				['Finland', 1],
+				['Estonia', 1],
+				['Peru', .30]
 			]);
 
 			var options = {
-                backgroundColor:{stroke: '#c2302c'},
-				colorAxis: { minValue: 0, colors:['#c2302c','#c2302c'],colors:['#c2302c','#c2302c']},
-                datalessRegionColor: '#000',
+				backgroundColor: { stroke: '#c2302c' },
+				colorAxis: { minValue: 0, maxValue: 1, colors: ['#000', '#c2302c'] },
+				datalessRegionColor: '#000',
 				displayMode: 'regions',
 				enableRegionInteractivity: true,
+				legend: 'none',
 				magnifyingGlass: { enable: true, zoomFactor: 7.5 }
 			};
 
