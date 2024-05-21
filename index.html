@@ -1,66 +1,62 @@
-﻿
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Travels</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<title>Travels</title>
+		<meta content="" name="description">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
 
-</head>
-<body>
-	<div id="chart_div" style="width: 100%; height:95vh">
-	</div>
+	</head>
+	<body>
+		<div id="map" style="width: 100%; height:95vh"></div>
 
 
-	<script type='text/javascript' src='https://www.google.com/jsapi'></script>
-	<script type='text/javascript'>
-		google.load('visualization', '1', { 'packages': ['geochart'] });
-		google.setOnLoadCallback(drawRegionsMap);
+		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+		<script type="text/javascript">
+			google.load('visualization', '1', {'packages': ['geochart']});
+			google.setOnLoadCallback(drawRegionsMap);
 
-		function drawRegionsMap() {
-			var data = google.visualization.arrayToDataTable([
-				['Country', 'x'],
-				['United States', 1],
+			function drawRegionsMap() {
+				var data = google.visualization.arrayToDataTable([
+					['Country', 'x'],
+					['United States', 1],
 					['Puerto Rico', 1],
-				['Canada', 1],
-				['Mexico', 1],
-				['Denmark', 1],
-				['Netherlands', 1],
-				['Italy', 1],
-				['Iceland', 1],
-				['Spain', 1],
-				['Sweden', 1],
-				['Norway', 1],
-				['Morocco', 1],
-				['France', 1],
-				['Finland', 1],
-				['Estonia', 1],
-				['Costa Rica', 1],
-				['Nicaragua', 1],
+					['Canada', 1],
+					['Mexico', 1],
+					['Denmark', 1],
+					['Netherlands', 1],
+					['Italy', 1],
+					['Iceland', 1],
+					['Spain', 1],
+					['Sweden', 1],
+					['Norway', 1],
+					['Morocco', 1],
+					['France', 1],
+					['Finland', 1],
+					['Estonia', 1],
+					['Costa Rica', 1],
+					['Nicaragua', 1],
+					['Austria', 1],
+					['Slovakia', 1],
+					['Hungary', 1],
+					['United Kingdom', 1],
+					['Latvia', .2],
+				]);
 
-				['Latvia', .2],
+				var options = {
+					backgroundColor: {stroke: '#c2302c'},
+					colorAxis: {minValue: 0, maxValue: 1, colors: ['#000', '#c2302c']},
+					datalessRegionColor: '#000',
+					displayMode: 'regions',
+					enableRegionInteractivity: true,
+					legend: 'none',
+					magnifyingGlass: {enable: true, zoomFactor: 7.5}
+				};
 
-				['Austria', 1],
-				['Slovakia', 1],
-				['Hungary', 1],
-				['United Kingdom', 1]
-			]);
-
-			var options = {
-				backgroundColor: { stroke: '#c2302c' },
-				colorAxis: { minValue: 0, maxValue: 1, colors: ['#000', '#c2302c'] },
-				datalessRegionColor: '#000',
-				displayMode: 'regions',
-				enableRegionInteractivity: true,
-				legend: 'none',
-				magnifyingGlass: { enable: true, zoomFactor: 7.5 }
-			};
-
-			var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
-			chart.draw(data, options);
-		};
-	</script>
-</body>
+				var chart = new google.visualization.GeoChart(document.getElementById('map'));
+				chart.draw(data, options);
+			}
+		</script>
+	</body>
 </html>
